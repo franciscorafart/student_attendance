@@ -20,7 +20,7 @@ Array.from(attended).forEach((element)=>{
       body: JSON.stringify({
         'name': name,
         'lastname': lastname,
-        'att': 'Present'
+        'att': 'On time'
       })
     }).then(response =>{
       if (response.ok) return response.json()
