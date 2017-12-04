@@ -1,0 +1,47 @@
+body{
+
+}
+h1, p{
+  text-align: center;
+  text-shadow: 1px 1px white;
+}
+p{
+  font-size: 1.6em;
+  margin: 0 0 10px 0;
+}
+form{
+  display: block;
+  width: 50%;
+  padding: 40px 0 10px 0;
+}
+body{
+  background-image: url('https://edtechmagazine.com/k12/sites/default/files/articles/EdTech/201706/archideaphoto_GoogleClassroom.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img{
+  width: 15px;
+}
+.top{
+  display: block;
+  width: 50%;
+  margin-left: 25%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.studentList{
+  border: 1px solid black;
+  padding: 20px 5% 20px 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.students{
+  padding: 5px 0 5px 0;
+  border-bottom: 1px solid gray;
+}
+.students>span{
+  display: block;
+  float: left;
+  margin-right: 2%;
+  min-width: 10%;
+}
