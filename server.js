@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true})) //this allows node to look for 
 app.use(bodyParser.json())
 app.use(express.static('public'))
 
-
+//API
 app.get('/', (req,res)=>{
 
   db.collection('students').find().toArray((err,result) =>{
@@ -30,7 +30,11 @@ app.get('/', (req,res)=>{
 })
 
 app.post('/addstudent', (req, res)=>{
-  db.collection('students').save({name:req.body.name, lastname:req.body.lastname, att: ""}, (err,result)=>{
+
+  let date = Math.floor(Date.now()/1000)
+  
+  console.log(date)
+  db.collection('students').save({name:req.body.name, lastname:req.body.lastname, date: date, att: ""}, (err,result)=>{
     if (err) return console.log(err)
     console.log('Saved to database')
     res.redirect('/')

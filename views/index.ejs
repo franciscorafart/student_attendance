@@ -22,12 +22,26 @@
     </form>
 
     <ul class="studentList">
+      <!-- Top row -->
+      <li class="students">
+        <span>Name</span>
+        <span>Last Name</span>
+        <span>Date added</span>
+        <span>On time</span>
+        <span>Late</span>
+        <span>Delete</span>
+        <span>Attendance</span>
+      </li>
       <!-- messages.length is the amount of objects in the collection  -->
     <% for(var i=0; i<students.length; i++) {%>
+      <% let thisDate = new Date(students[i].date*1000)
+      let dateString = thisDate.getUTCMonth()+"-"+thisDate.getUTCDate()+"-"+thisDate.getUTCFullYear()
+      %>
+
       <li class="students">
         <span><%= students[i].name %></span>
         <span><%= students[i].lastname %></span>
-
+        <span><%= dateString %></span>
         <span><img class="fa fa-thumbs-up" src="images/ontime.png"aria-hidden="true"></span>
         <span><img class="fa fa-thumbs-down" src="images/late.png" aria-hidden="true"></span>
         <span><i class="fa fa-trash" aria-hidden="true"></i></span>

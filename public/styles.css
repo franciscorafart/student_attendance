@@ -41,6 +41,12 @@ img{
 .students{
   padding: 5px 0 5px 0;
   border-bottom: 1px solid gray;
+  list-style: none;
+  height: 20px;
+}
+.students:first-of-type{
+  border-bottom: 2px solid gray;
+  font-weight: bold;
 }
 .students>span{
   display: block;
